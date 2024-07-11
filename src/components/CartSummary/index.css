@@ -1,0 +1,29 @@
+/* Write your CSS here */
+.cart-summary-container {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto';
+  align-self: flex-end;
+  color: #616e7c;
+  width: 300px;
+}
+.summary-total {
+  font-size: 20px;
+  margin: 0px;
+}
+.total-price {
+  font-weight: bold;
+  color: #171f46;
+  font-size: 25px;
+}
+.button-summ {
+  background-color: #0b69ff;
+  padding: 10px;
+  border: none;
+  color: #ffffff;
+}
+.summary-para {
+  font-size: 12px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
