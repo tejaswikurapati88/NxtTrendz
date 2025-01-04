@@ -36,7 +36,15 @@ class LoginForm extends Component {
   submitForm = async event => {
     event.preventDefault()
     const {username, password} = this.state
+
     const userDetails = {username, password}
+    if (username === 'tejaswi') {
+      userDetails.username = 'rahul'
+    }
+    if (password === 'teja@2022') {
+      userDetails.password = 'rahul@2021'
+    }
+    console.log(userDetails)
     const url = 'https://apis.ccbp.in/login'
     const options = {
       method: 'POST',
@@ -123,6 +131,7 @@ class LoginForm extends Component {
             Login
           </button>
           {showSubmitError && <p className="error-message">*{errorMsg}</p>}
+          <p className="usepass">username: 'tejaswi', password: 'teja@2022'</p>
         </form>
       </div>
     )

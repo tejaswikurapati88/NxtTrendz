@@ -8,9 +8,9 @@ const FiltersGroup = props => {
 
     return ratingsList.map(rating => {
       const {changeRating, activeRatingId} = props
-      const ratingClassName = 
+      const ratingClassName =
         activeRatingId === rating.ratingId ? `and-up active-rating` : `and-up`
-      
+
       const onClickRatingItem = () => changeRating(rating.ratingId)
 
       return (
@@ -74,6 +74,11 @@ const FiltersGroup = props => {
     }
   }
 
+  const onClickSerachBtn = () => {
+    const {enterSearchInput} = props
+    enterSearchInput()
+  }
+
   const onChangeSearchInput = event => {
     const {changeSearchInput} = props
     changeSearchInput(event.target.value)
@@ -91,7 +96,7 @@ const FiltersGroup = props => {
           onChange={onChangeSearchInput}
           onKeyDown={onEnterSearchInput}
         />
-        <BsSearch className="search-icon" />
+        <BsSearch onClick={onClickSerachBtn} className="search-icon" />
       </div>
     )
   }
